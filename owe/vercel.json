@@ -1,0 +1,28 @@
+
+
+{
+  "rewrites": [
+    {
+      "source": "/old-path/:slug",
+      "destination": "/new-path/:slug"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/deprecated",
+      "destination": "/new-location",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/:path*",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    }
+  ]
+}
